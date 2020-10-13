@@ -22,9 +22,9 @@ void readelev(struct elev *elevptr) {
 	printf("Numele:\n");
 	scanf(" %s",(*elevptr).lastName);
 	printf("Prima nota:\n");
-	scanf(" %f",&(*elevptr).nota1);
+	scanf(" %f",&elevptr->nota1);
 	printf("A doua nota:\n");
-	scanf(" %f",&(*elevptr).nota2);
+	scanf(" %f",&elevptr->nota2);
 	(*elevptr).medie=((*elevptr).nota1+(*elevptr).nota2)/2;
 }
 
