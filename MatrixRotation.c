@@ -14,11 +14,11 @@ int main() {
 	
 	mat = malloc(ran * sizeof *mat);
   	for (i=0; i<ran; i++) {
-    	mat[i] = malloc(col * sizeof *mat[i]);
+    		mat[i] = malloc(col * sizeof *mat[i]);
   	}	
  	matrot = malloc(col * sizeof *matrot);
   	for (i=0; i<col; i++) {
-    	matrot[i] = malloc(ran * sizeof *matrot[i]);
+    		matrot[i] = malloc(ran * sizeof *matrot[i]);
   	}
   	
 	for(i=0;i<ran;i++) {
@@ -31,6 +31,8 @@ int main() {
 	rotire(mat,matrot,ran,col);
 	printf("Matricea rotita:\n");
 	afisare(matrot,col,ran);
+	free(mat);
+	free(matrot);
 	return 0;
 }
 
